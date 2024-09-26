@@ -1,0 +1,12 @@
+interface types {
+    record interpolator-iv-request {
+        date: string,
+        currency: s8
+    }
+
+    record interpolator-iv-response {
+        code: s16,
+        message: string,
+        iv: f64
+    }
+}

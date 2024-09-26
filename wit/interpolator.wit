@@ -1,0 +1,6 @@
+interface handler {
+    use jabratech:common/types.{response};
+    use types.{interpolator-iv-request, interpolator-iv-response};
+
+    get-iv: func(request: interpolator-iv-request) -> result<interpolator-iv-response, response>;
+}

@@ -1,0 +1,5 @@
+package jabratech:interpolator-workflow;
+
+world interpolator-workflow {
+    export handler;
+}

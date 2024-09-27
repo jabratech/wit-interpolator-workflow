@@ -35,7 +35,7 @@ interface types {
     record interpolator-data-response {
         code: s16,
         message: string,
-        data: interpolator-data
+        data: list<interpolator-data>
     }
 
     record interpolator-data {

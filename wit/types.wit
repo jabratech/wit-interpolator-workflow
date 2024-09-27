@@ -19,7 +19,7 @@ interface types {
         message: string,
         config: interpolator-config
     }
-    
+
     record interpolator-config {
         currency: s8,
         initial-value: f64,
@@ -29,7 +29,7 @@ interface types {
 
     record interpolator-data-request {
         date: option<string>,
-        currency: s8
+        config: interpolator-config
     }
 
     record interpolator-data-response {

@@ -1,5 +1,4 @@
 interface types {
-    use jabratech:interpolator-common/types.{interpolator-config};
     record interpolator-iv-request {
         date: string,
         currency: s8
@@ -19,6 +18,13 @@ interface types {
         code: s16,
         message: string,
         config: interpolator-config
+    }
+    
+    record interpolator-config {
+        currency: s8,
+        initial-value: f64,
+        mean-rev: f64,
+        decay: f64
     }
 
     record interpolator-data-request {

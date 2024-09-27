@@ -3,4 +3,6 @@ interface handler {
     use types.{interpolator-iv-request, interpolator-iv-response};
 
     get-iv: func(request: interpolator-iv-request) -> result<interpolator-iv-response, response>;
+    get-config: func(request: interpolator-config-request) -> result<interpolator-config-response, response>;
+    get-data: func(request: interpolator-data-request) -> result<interpolator-data-response, response>;
 }

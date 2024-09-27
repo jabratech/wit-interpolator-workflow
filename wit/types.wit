@@ -1,4 +1,5 @@
 interface types {
+    
     record interpolator-iv-request {
         date: string,
         currency: s8
@@ -8,5 +9,42 @@ interface types {
         code: s16,
         message: string,
         iv: f64
+    }
+
+    record interpolator-config-request {
+        currency: s8
+    }
+
+    record interpolator-config-response {
+        code: s16,
+        message: string,
+        config: interpolator-config
+    }
+
+    record interpolator-config {
+        currency: s8,
+        decay: f64,
+        initial-value: f64,
+        mean-rev: f64
+    }
+    record interpolator-data-request {
+        date: option<string>,
+        currency: s8
+    }
+
+    record interpolator-data-response {
+        code: s16,
+        message: string,
+        data: interpolator-data
+    }
+
+    record interpolator-data {
+        currency: s8,
+        date: string,
+        weight: f64,
+        is-multiply: bool,
+        is-add: bool,
+        cd: string,
+        md: string
     }
 }

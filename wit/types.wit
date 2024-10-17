@@ -47,6 +47,7 @@ interface types {
     record interpolator-data {
         currency: s8,
         date: string,
+        day-of-week:string,
         weight: f64,
         is-multiply: bool,
         is-add: bool,

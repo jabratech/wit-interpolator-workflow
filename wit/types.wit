@@ -24,7 +24,13 @@ interface types {
         currency: s8,
         initial-value: f64,
         mean-rev: f64,
-        decay: f64
+        decay: f64,
+        saturday-weight: f64,
+        multiply-saturday: bool,
+        add-saturday: bool,
+        sunday-weight: f64,
+        multiply-sunday: bool,
+        add-sunday: bool
     }
 
     record interpolator-data-request {
@@ -48,7 +54,8 @@ interface types {
         md: string,
         discreet: f64,
         final-value: f64,
-        iv: f64
+        iv: f64,
+        adjustment: f64
 
     }
 }

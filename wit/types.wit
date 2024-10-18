@@ -57,6 +57,34 @@ interface types {
         final-value: f64,
         iv: f64,
         adjustment: f64
+    }
 
+    record decay-curve-response {
+        code: s8,
+        message: string,
+        data: decay-curve
+    }
+    record decay-curve {
+        header: decay-curve-header,
+        data: list<name-floatlist-value-pair>
+    }
+    record decay-curve-header {
+        name: string,
+        values: list<string>
+    }
+
+    record volatility-summary-response {
+        code: s8,
+        message: string,
+        data: volatility-summary
+    }
+
+    record volatility-summary {
+        header: list<string>,
+        data: list<name-floatlist-value-pair>
+    }
+    record name-floatlist-value-pair {
+        name: string,
+        values: list<f64>
     }
 }

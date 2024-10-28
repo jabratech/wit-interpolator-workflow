@@ -56,7 +56,8 @@ interface types {
         discreet: f64,
         final-value: f64,
         iv: f64,
-        adjustment: f64
+        adjustment: f64,
+        smile-adjustment: f64
     }
 
     record decay-curve-response {
